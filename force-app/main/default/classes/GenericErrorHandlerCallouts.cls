@@ -2,25 +2,26 @@
  * Created by Sergey Krivorotov.
  */
 
-public with sharing class GenericErrorHandlerCallouts extends GenericErrorHandler implements Database.AllowsCallouts{
-
-    public void execute(QueueableContext qc) {
-//        Http http = new Http();
-//        HttpRequest request = new HttpRequest();
-//        request.setEndpoint('https://test.com');
-//        request.setMethod('GET');
-//        HttpResponse response = http.send(request);
-//        System.debug('Status:' + response.getStatus());
-//        if (response.getStatus() == 'OK') status = 'Success';
-        System.debug('WORK WORK WORK');
-    }
+public with sharing class GenericErrorHandlerCallouts extends GenericErrorHandler{
 
     public override Type getType() {
         return GenericErrorHandlerCallouts.class;
     }
 
-    public override String getStatus() {
-        return status;
+    public void execute(QueueableContext param1) {
+        try {
+            Http http = new Http();
+            HttpRequest request = new HttpRequest();
+            request.setEndpoint('callout:RatesService1');
+            request.setMethod('GET');
+            HttpResponse response = http.send(request);
+            System.debug('Response: ' + response.getBody());
+            if (response.getStatus() == 'OK') status = 'Success';
+            System.debug('Status:' + status);
+            System.debug('Response status: ' + response.getStatus());
+        } catch (Exception e) {
+            System.debug('Error: ' + e.getMessage() + '. ' + e.getStackTraceString());
+        }
     }
 
 }
