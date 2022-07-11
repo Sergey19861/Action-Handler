@@ -1,5 +1,7 @@
 /**
  * Created by Sergey Krivorotov.
+ *
+ * Designed to schedule new Action job according Action settings.
  */
 
 public with sharing class ActionScheduler implements Schedulable {
