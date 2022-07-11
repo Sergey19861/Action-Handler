@@ -6,12 +6,18 @@
 
 public with sharing class ActionScheduler implements Schedulable {
 
-    public ActionSettings__c actionSettings;
-    public Action action;
+    @TestVisible
+    private ActionSettings__c actionSettings;
+    private Action action;
 
     public ActionScheduler(Action action) {
         this.action = action;
         actionSettings = ActionSettings__c.getValues(action.getType().getName());
+        if (actionSettings == null) {
+            actionSettings = new ActionSettings__c();
+            actionSettings.Attempts__c = 1;
+            actionSettings.Interval__c = 1;
+        }
     }
 
     public void schedule() {
