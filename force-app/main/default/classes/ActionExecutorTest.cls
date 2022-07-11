@@ -32,7 +32,6 @@ private class ActionExecutorTest {
         System.assertEquals(1, scheduler.actionSettings.Interval__c.intValue());
     }
 
-
     @IsTest
     static void testSchedule() {
         MockFactory mock = new MockFactory(404, 'Failed', '', new Map<String, String>());
