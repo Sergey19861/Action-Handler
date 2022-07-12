@@ -21,8 +21,7 @@
 
 This functionality is designed to repeatedly execute some logic in cases where an error occurs.
 The logic will be executed a certain number of times (set in custom settings) until an error 
-occurs or attempts are over. To use this functionality, extend the Action class then override 
-the execute() method with your logic inside.
+occurs or attempts are over. 
 
  - **Purpose and Audience**
 
@@ -91,7 +90,7 @@ There are no new profiles introduced for this feature.
 
 ### 6. User experience
 
-Following will be user experience for various use stories being implemented as part of this feature.
+To use this functionality, extend the Action class then override the execute() method with your logic inside.
 
 ***
 
