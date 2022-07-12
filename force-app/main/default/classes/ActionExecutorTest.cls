@@ -22,14 +22,11 @@ private class ActionExecutorTest {
         MockFactory mock = new MockFactory(404, 'Failed', '', new Map<String, String>());
         Test.setMock(HttpCalloutMock.class, mock);
         Test.startTest();
-        ActionScheduler scheduler = new ActionScheduler(new ActionUpdateRates());
-        scheduler.schedule();
+        ActionExecutor.execute(new ActionUpdateRates());
         Test.stopTest();
         List<AsyncApexJob> jobs = [SELECT Id FROM AsyncApexJob];
 
-        System.assertEquals(2, jobs.size());
-        System.assertEquals(1, scheduler.actionSettings.Attempts__c.intValue());
-        System.assertEquals(1, scheduler.actionSettings.Interval__c.intValue());
+        System.assertEquals(0, jobs.size());
     }
 
     @IsTest

@@ -16,12 +16,12 @@ public with sharing class ActionScheduler implements Schedulable {
         if (actionSettings == null) {
             actionSettings = new ActionSettings__c();
             actionSettings.Attempts__c = 1;
-            actionSettings.Interval__c = 1;
+            actionSettings.Interval__c = 0;
         }
     }
 
     public void schedule() {
-        if (action.attemptNumber > actionSettings.Attempts__c.intValue()) return;
+        if (action.attemptNumber >= actionSettings.Attempts__c.intValue()) return;
         System.schedule(
                 action.getType().getName() + System.now().getTime(),
                 buildCronExpression(),

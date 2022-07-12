@@ -167,11 +167,10 @@ List of classes, components, fields, objects, rule and other entities which were
 | Version # | Reviewer | Review Date | Remarks |
 |:----------|:---------|:------------|:--------|
 |           |          |             |         | 
-|           |          |             |         |
+
 
  - **DOCUMENT APPROVALS**
 
 | Approver     | Project Role | Signature/Electronic Approval | Date |
 |:-------------|:-------------|:------------------------------|:-----|
 |              |              |                               |      | 
-|              |              |                               |      |
