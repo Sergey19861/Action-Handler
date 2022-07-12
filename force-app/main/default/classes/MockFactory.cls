@@ -1,5 +1,7 @@
 /**
  * Created by Sergey Krivorotov.
+ *
+ * Created to mock Http Callout Response.
  */
 
 @IsTest
