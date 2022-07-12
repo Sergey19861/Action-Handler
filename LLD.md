@@ -13,7 +13,7 @@
 | Version # |    Date    |      Author       |     Reason for Change     |
 |:---------:|:----------:|:-----------------:|:-------------------------:|
 |    0.1    | 11.07.2022 | Sergey Krivorotov | Creation of functionality | 
-|           |            |                   |                           |
+
 
 ***
 
@@ -28,18 +28,11 @@ occurs or attempts are over.
 This functionality is designed to simplify and generalize the execution of logic where errors
 may occur beyond the control of the developer.
 
- - **Acronyms**
-
-| Acronyms | Acronyms Description |
-|:--------:|:--------------------:|
-|          |                      |
-
  - **Supporting Project References**
 
 [Git Hub](https://github.com/Sergey19861/Action-Handler)
 
 ***
-
 
 ### 2. Business UseCase
  - The project has a demo class that shows how to perform callouts to an external system (which may not work stably)
@@ -81,7 +74,6 @@ There are no new profiles introduced for this feature.
 | Permission Set    | License Type |         Description (Access and assignment)          |
 |:-----------------:|:------------:|:----------------------------------------------------:|
 |  Action Handler   |     None     | Uses to give access to Action Handler functionality  |
-|                   |              |                                                      |
 
  - **Sharing Settings**
 
@@ -102,7 +94,7 @@ To use this functionality, extend the Action class then override the execute() m
 |    #     | List View Name   | Assignment (RT/Profiles) |         Changes made                |           Comments                      |
 |:--------:|:----------------:|:------------------------:|:-----------------------------------:|:---------------------------------------:|
 |    1     |       All        |      For all users       | Added fields: Attempts and Interval | Added this list view for ActionSettings |
-|          |                  |                          |                                     |                                         |
+
 
 #1 ActionSettings All List View
 
@@ -116,7 +108,7 @@ To use this functionality, extend the Action class then override the execute() m
 |      Name      |     API name      |      Type       |             Access             |
 |:--------------:|:-----------------:|:---------------:|:------------------------------:|
 | ActionSettings | ActionSettings__c | Custom Settings | Action Handler(permission set) | 
-|                |                   |                 |                                |
+
 
 ActionSettings
 
@@ -124,7 +116,6 @@ ActionSettings
 |:-----------:|:-----------:|:------:|:------------------------------------------------:|:------------------------------:|
 |  Attempts   | Attempts__c | Number | Define how many times the logic will be executed | Action Handler(permission set) | 
 |  Interval   | Interval__c | Number |  Define how many minutes between next attempts   | Action Handler(permission set) |
-|             |             |        |                                                  |                                |
 
 ***
 
@@ -140,7 +131,6 @@ ActionSettings
 | ActionScheduler    | Apex Class      | Designed to schedule new Action job according Action settings |
 | ActionUpdateRates  | Apex Class      | Demo class. Designed to demonstrate Action logic.             |
 | MockFactory        | Apex Class      | Created to mock Http Callout Response in test methods.        |
-|                    |                 |                                                               |
 
 ***
 
@@ -154,23 +144,12 @@ No new Lightning Components were introduced to implement this feature.
 
 List of classes, components, fields, objects, rule and other entities which were deleted during work on Epic/Feature.
 
-| Element          | Type             | Reason (include Requirement Id if applicable)           |
-|:-----------------|:-----------------|:--------------------------------------------------------|
-|                  |                  |                                                         |
-
 ***
 
 ### 12. Review and Sign Off
 
  - **DOCUMENT REVIEWS**
 
-| Version # | Reviewer | Review Date | Remarks |
-|:----------|:---------|:------------|:--------|
-|           |          |             |         | 
-
 
  - **DOCUMENT APPROVALS**
-
-| Approver     | Project Role | Signature/Electronic Approval | Date |
-|:-------------|:-------------|:------------------------------|:-----|
-|              |              |                               |      | 
+ 
