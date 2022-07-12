@@ -106,7 +106,7 @@ To use this functionality, extend the Action class then override the execute() m
 
 #1 ActionSettings All List View
 
-![All List View](/images/actionSettingsAll.jpg)
+![All List View](/images/ActionSettingsAll.jpg)
 
 ***
 
