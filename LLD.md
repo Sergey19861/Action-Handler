@@ -49,6 +49,7 @@ may occur beyond the control of the developer.
 ### 3. Design Overview
 
  - **Entity Relationship Diagram**
+
    ![Project Diagram](/images/diagram.jpg)
 
 ***
